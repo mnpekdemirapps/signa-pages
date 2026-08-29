@@ -110,6 +110,7 @@
         </div>
 
         <p>We do not receive your full payment card number or Apple ID credentials. Apple processes payment information. The exact information collected by Google and Apple can change with their SDKs, your settings, and their policies.</p>
+        <p>After StoreKit verifies a transaction, Signa sends Firebase Analytics a limited <code>iap_result</code> event only after local delivery succeeds or if that verified delivery fails. Its custom parameters are limited to the product identifier, <code>success</code> or <code>delivery_error</code>, and the known <code>purchase</code> or <code>restore</code> source. Signa does not put a receipt, transaction ID, price, currency, payment details, or a user or device ID in these custom parameters. Canceled, pending, unverified, and purchase-start or store errors are not logged by this event.</p>
 
         <h3>Information you choose to provide</h3>
         <p>If you contact support, we receive the information in your message, such as your email address, device details, level number, screenshots, screen recordings, and any other information you choose to send. Please do not send sensitive personal information that is unnecessary for your request.</p>
@@ -134,7 +135,7 @@
         <h2>4. Service providers and third parties</h2>
         <p>We use the following providers, which may process information on our behalf or under their own policies:</p>
         <ul class="external-list">
-          <li><strong>Google Firebase Analytics</strong> helps us understand app usage and feature performance. See <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a> and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+          <li><strong>Google Firebase Analytics</strong> helps us understand app usage, feature performance, and the limited verified purchase-delivery results described above. See <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a> and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
           <li><strong>Firebase Crashlytics</strong> provides crash and diagnostic reports so we can identify stability problems. Crash reports are generally retained for 90 days by Firebase. See <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a>.</li>
           <li><strong>Firebase Remote Config</strong> lets us safely adjust app configuration without requiring an immediate update. See <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a>.</li>
           <li><strong>Google AdMob</strong> delivers rewarded and interstitial advertising, handles consent signals, measures ads, and helps prevent ad fraud. See <a href="https://policies.google.com/technologies/ads">How Google uses information for advertising</a> and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>

@@ -110,6 +110,7 @@
         </div>
 
         <p>Tam ödeme kartı numaranızı veya Apple Kimliği giriş bilgilerinizi almayız. Ödeme bilgilerini Apple işler. Google ve Apple'ın topladığı kesin bilgiler; SDK sürümlerine, ayarlarınıza ve kendi politikalarına göre değişebilir.</p>
+        <p>StoreKit bir işlemi doğruladıktan sonra Signa, yalnız yerel teslimat başarılı olduğunda veya bu doğrulanmış teslimat başarısız olursa Firebase Analytics'e sınırlı bir <code>iap_result</code> olayı gönderir. Özel parametreleri ürün tanımlayıcısı, <code>success</code> veya <code>delivery_error</code> sonucu ve kesin olarak bilinen <code>purchase</code> veya <code>restore</code> kaynağıyla sınırlıdır. Signa bu özel parametrelere receipt/JWS, işlem kimliği, fiyat, para birimi, ödeme bilgisi ya da kullanıcı veya cihaz kimliği koymaz. İptal edilmiş, bekleyen, doğrulanmamış işlemler ile satın almayı başlatma veya mağaza hataları bu olayla kaydedilmez.</p>
 
         <h3>Paylaşmayı seçtiğiniz bilgiler</h3>
         <p>Destekle iletişime geçerseniz e-posta adresiniz, cihaz ayrıntıları, bölüm numarası, ekran görüntüleri, ekran kayıtları ve göndermeyi seçtiğiniz diğer bilgiler gibi mesajınızdaki verileri alırız. Talebiniz için gereksiz hassas kişisel bilgiler göndermeyin.</p>
@@ -134,7 +135,7 @@
         <h2>4. Hizmet sağlayıcılar ve üçüncü taraflar</h2>
         <p>Bizim adımıza veya kendi politikaları kapsamında bilgi işleyebilen şu sağlayıcıları kullanırız:</p>
         <ul class="external-list">
-          <li><strong>Google Firebase Analytics</strong>, uygulama kullanımını ve özellik performansını anlamamıza yardımcı olur. <a href="https://firebase.google.com/support/privacy">Firebase Gizlilik ve Güvenlik</a> ile <a href="https://policies.google.com/privacy?hl=tr">Google Gizlilik Politikası</a>'na bakın.</li>
+          <li><strong>Google Firebase Analytics</strong>, uygulama kullanımını, özellik performansını ve yukarıda açıklanan sınırlı doğrulanmış satın alma teslimatı sonuçlarını anlamamıza yardımcı olur. <a href="https://firebase.google.com/support/privacy">Firebase Gizlilik ve Güvenlik</a> ile <a href="https://policies.google.com/privacy?hl=tr">Google Gizlilik Politikası</a>'na bakın.</li>
           <li><strong>Firebase Crashlytics</strong>, kararlılık sorunlarını belirleyebilmemiz için çökme ve tanılama raporları sunar. Çökme raporları Firebase tarafından genellikle 90 gün saklanır. <a href="https://firebase.google.com/support/privacy">Firebase Gizlilik ve Güvenlik</a>'e bakın.</li>
           <li><strong>Firebase Remote Config</strong>, acil güncelleme gerektirmeden uygulama yapılandırmasını güvenle ayarlamamızı sağlar. <a href="https://firebase.google.com/support/privacy">Firebase Gizlilik ve Güvenlik</a>'e bakın.</li>
           <li><strong>Google AdMob</strong>; ödüllü ve geçiş reklamları sunar, izin sinyallerini işler, reklamları ölçer ve reklam dolandırıcılığını önlemeye yardımcı olur. <a href="https://policies.google.com/technologies/ads?hl=tr">Google'ın reklamlar için bilgileri nasıl kullandığı</a> ve <a href="https://policies.google.com/privacy?hl=tr">Google Gizlilik Politikası</a>'na bakın.</li>
