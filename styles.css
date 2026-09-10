@@ -37,6 +37,7 @@ html {
 
 body {
   min-width: 320px;
+  overflow-x: clip;
   margin: 0;
   color: var(--ink);
   background:
@@ -321,7 +322,7 @@ li + li {
 
 .game-preview::after {
   position: absolute;
-  inset: 8% -8% -8% 15%;
+  inset: 8% 0 -8% 15%;
   z-index: -1;
   content: "";
   background: rgba(37, 201, 178, 0.12);
@@ -569,6 +570,11 @@ details p {
   background: rgba(124, 164, 255, 0.1);
 }
 
+.policy-content {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .policy-content h1 {
   margin-bottom: 0.75rem;
   font-size: clamp(2.35rem, 6vw, 4.4rem);
@@ -686,16 +692,16 @@ tr:last-child td {
   }
 
   .policy-shell {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .policy-nav {
     position: static;
     display: flex;
-    overflow-x: auto;
+    flex-wrap: wrap;
     padding: 0.65rem;
     gap: 0.2rem;
-    white-space: nowrap;
+    white-space: normal;
   }
 
   .policy-nav strong {

@@ -44,10 +44,10 @@
     <article class="policy-content">
       <span class="eyebrow">Signa: Math Puzzle</span>
       <h1>Privacy Policy</h1>
-      <p class="policy-meta"><strong>Effective and last updated:</strong> <time datetime="2026-08-29">August 29, 2026</time></p>
+      <p class="policy-meta"><strong>Effective and last updated:</strong> <time datetime="2026-09-10">September 10, 2026</time></p>
 
       <div class="policy-summary">
-        <strong>The short version:</strong> Signa has no player accounts. Your level progress, settings, stars, and hint balance are stored locally on your device. We use Firebase services to understand app performance and stability, Google AdMob to provide rewarded and interstitial ads, and Apple StoreKit to process in-app purchases. MNP does not sell your personal data for money.
+        <strong>The short version:</strong> Signa has no player accounts. Your level progress, settings, stars, and hint balance are stored locally on your device. We use Firebase services to understand app performance and stability, Google AdMob to provide rewarded and interstitial ads, and Apple StoreKit on iOS or Google Play Billing on Android to process in-app purchases. MNP does not sell your personal data for money.
       </div>
 
       <section class="policy-section" id="scope">
@@ -109,8 +109,9 @@
           </table>
         </div>
 
-        <p>We do not receive your full payment card number or Apple ID credentials. Apple processes payment information. The exact information collected by Google and Apple can change with their SDKs, your settings, and their policies.</p>
+        <p>We do not receive your full payment card number or your Apple or Google account password. Apple processes iOS payments and Google Play processes Android payments. The exact information collected by Google and Apple can change with their SDKs, your settings, and their policies.</p>
         <p>After StoreKit verifies a transaction, Signa sends Firebase Analytics a limited <code>iap_result</code> event only after local delivery succeeds or if that verified delivery fails. Its custom parameters are limited to the product identifier, <code>success</code> or <code>delivery_error</code>, and the known <code>purchase</code> or <code>restore</code> source. Signa does not put a receipt, transaction ID, price, currency, payment details, or a user or device ID in these custom parameters. Canceled, pending, unverified, and purchase-start or store errors are not logged by this event.</p>
+        <p>On Android, eligible Google Play purchase results use the same limited delivery event. Firebase Analytics also associates events with its app-instance identifier and processes automatic session and device information. Leaving identifiers out of our custom event parameters does not make those events anonymous. Signa disables Firebase Analytics advertising storage, advertising user-data use, and advertising personalization signals; these Analytics settings are separate from AdMob advertising choices.</p>
 
         <h3>Information you choose to provide</h3>
         <p>If you contact support, we receive the information in your message, such as your email address, device details, level number, screenshots, screen recordings, and any other information you choose to send. Please do not send sensitive personal information that is unnecessary for your request.</p>
@@ -128,7 +129,7 @@
           <li>answer support requests and communicate about a reported issue; and</li>
           <li>meet legal, regulatory, tax, accounting, or enforcement obligations.</li>
         </ul>
-        <p>Where applicable law requires a legal basis, we rely on: performance of our contract with you to provide the App and purchases; our legitimate interests in operating, securing, supporting, and improving the App; your consent for advertising processing where requested, including Android personalized advertising where Google UMP offers that choice; and compliance with legal obligations. You may withdraw consent through the App's privacy options where offered, or through your device settings. Withdrawal does not affect processing already carried out lawfully.</p>
+        <p>Where applicable law requires a legal basis, we rely on: performance of our contract with you to provide the App and purchases; our legitimate interests in operating, securing, supporting, and improving the App; your consent for advertising processing where requested; and compliance with legal obligations. You may withdraw consent through the App's privacy options where offered, or through your device settings. Withdrawal does not affect processing already carried out lawfully.</p>
       </section>
 
       <section class="policy-section" id="services">
@@ -140,6 +141,7 @@
           <li><strong>Firebase Remote Config</strong> lets us safely adjust app configuration without requiring an immediate update. See <a href="https://firebase.google.com/support/privacy">Firebase Privacy and Security</a>.</li>
           <li><strong>Google AdMob</strong> delivers rewarded and interstitial advertising, handles consent signals, measures ads, and helps prevent ad fraud. See <a href="https://policies.google.com/technologies/ads">How Google uses information for advertising</a> and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
           <li><strong>Apple StoreKit and the App Store</strong> process in-app purchases, transaction status, refunds, and eligible purchase restoration. See <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
+          <li><strong>Google Play Billing</strong> handles Android purchases, purchase tokens, transaction status, refunds, and eligible purchase recovery. See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
         </ul>
         <p>We require service providers that receive user data to provide the same or an equivalent level of protection described in this policy and required by applicable law.</p>
         <p>We may also disclose information when reasonably necessary to comply with law, protect users or our rights, investigate abuse, complete a business reorganization, or act with your direction or consent. Any successor would remain subject to this policy for the information it receives unless you are notified otherwise.</p>
@@ -148,9 +150,11 @@
       <section class="policy-section" id="ads">
         <h2>5. Advertising, consent, and privacy choices</h2>
         <p>Signa may show interstitial ads between appropriate gameplay moments and optional rewarded ads that grant an in-game benefit, such as one hint, after successful completion. Availability is not guaranteed.</p>
-        <p>Where required, a Google consent message asks for your choices before advertising data is used. On iOS, Signa always sends non-personalized AdMob requests, disables Google's publisher first-party (same-app) identifier before Mobile Ads initializes, and does not request Apple's App Tracking Transparency (ATT) permission. Signa does not use App data to track you across other companies' apps or websites. On Android, permitted ad serving—including whether Google may serve personalized or non-personalized ads—can depend on your region, Google UMP consent, and settings. You can revisit available choices through the App's <strong>Privacy Options</strong> and manage advertising controls provided by Google or your device platform.</p>
-        <p>MNP does not sell personal information for money. Some laws may define the use of third-party identifiers for personalized or cross-context advertising as "sharing," "targeted advertising," or a "sale" even when no money is exchanged. Signa's iOS configuration does not use App data for that cross-context tracking. On Android, where personalized advertising may be offered according to your region and UMP choices, use the privacy choice or opt-out controls made available in the App or contact us for help.</p>
-        <p class="notice">On iOS, ads are already requested as non-personalized. On Android, choosing non-personalized ads does not necessarily remove advertising. Pro removes automatic interstitial ads. Optional rewarded ads remain available when you deliberately choose to watch one for an in-game reward. Limited purchase verification and essential service processing may continue.</p>
+        <p>Google's User Messaging Platform (UMP) checks advertising consent and presents applicable privacy messages. Advertising starts only after that flow completes and the SDK reports that ads may be requested. Personalized, non-personalized, or limited ad serving depends on your region, consent, device settings, app version, and the available advertising configuration. You can revisit available choices through the App's <strong>Privacy Options</strong>.</p>
+        <p>On iOS, Signa disables Google’s publisher first-party (same-app) identifier before starting the advertising SDK. This setting does not disable every advertising identifier or replace your consent and ATT choices. It does not apply to Android.</p>
+        <p>On iOS, Apple's App Tracking Transparency (ATT) permission is separate from regional advertising consent. An ATT request may appear through Google's consent flow when the relevant message is configured and your device can show it. Your permission is required before accessing the advertising identifier (IDFA) or tracking you across other companies' apps and websites for personalized advertising or advertising measurement. Refusing ATT does not prevent you from playing. Where regional consent allows, ads can still be served without IDFA. A privacy prompt or permission does not guarantee an available ad.</p>
+        <p>MNP does not sell personal information for money. Some laws may define the use of third-party identifiers for personalized or cross-context advertising as "sharing," "targeted advertising," or a "sale" even when no money is exchanged. Use the privacy choice or opt-out controls made available in the App and your device settings, or contact us for help.</p>
+        <p class="notice">Choosing non-personalized ads or refusing tracking does not necessarily remove advertising. Pro removes automatic interstitial ads. Optional rewarded ads remain available when you deliberately choose to watch one for an in-game reward. Limited purchase verification and essential service processing may continue.</p>
       </section>
 
       <section class="policy-section" id="retention">
@@ -171,7 +175,7 @@
           <li>Use your device privacy settings to reset permissions or manage device-level advertising choices.</li>
           <li>Contact us to request access to or deletion of information we can reasonably identify and control.</li>
         </ul>
-        <p>Removing local app data may also remove unused consumable hint balances. Apple does not restore consumable purchases.</p>
+        <p>Removing local app data may also remove unused consumable hint balances. Restore recovers eligible Pro access with the original store account; it does not recreate consumed hint purchases or transfer purchases between Apple and Google accounts.</p>
       </section>
 
       <section class="policy-section" id="transfers">
